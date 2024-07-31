@@ -1,5 +1,6 @@
 import string
 
+
 def caesar_encrypt(message, key):
 
   shift = key % 26
@@ -22,4 +23,12 @@ def caesar_decrypt(encrypted_message, key):
   return message
 
 
+message = "Iam Chaimae Rouita"
+key = 5
+
+encrypted_message = caesar_encrypt(message, key)
+print(f'Encrypted message: {encrypted_message}')
+
+decrypted_message = caesar_decrypt(encrypted_message, key)
+print(f'Decrypted message: {decrypted_message}')
   
