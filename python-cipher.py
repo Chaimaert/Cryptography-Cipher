@@ -3,11 +3,13 @@ import string
 
 def caesar_encrypt(message, key):
 
-  shift = key % 26
+  shift = key % 26 #This ensures that the shift value is within the valid range of 0-25
 
   cipher = str.maketrans(string.ascii_lowercase, string.ascii_lowercase[shift:] + string.ascii_lowercase[:shift])
+  #This line creates a translation table using str.maketrans it maps each letter of the alphabet to another letter shifted by shift positions
 
   encrypted_message = message.lower().translate(cipher)
+  #This line converts the message to lowercase  and then translates it using the cipher translation table.
 
   return encrypted_message
 
